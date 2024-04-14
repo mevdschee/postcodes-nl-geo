@@ -7,11 +7,11 @@ $database = 'postcodes';
 // code
 $dsn = "mysql:host=$hostname;dbname=$database;charset=UTF8";
 $pdo = new PDO($dsn, $username, $password, [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
-$sql = "CREATE TABLE IF NOT EXISTS `postcodes` (`straat` varchar(255),`huisnummer` varchar(255),`huisletter` varchar(255),`huistoevoeging` varchar(255),`woonplaats` varchar(255),`postcode` varchar(255),`x` int,`y` int,INDEX(`postcode`));";
+$sql = "CREATE TABLE IF NOT EXISTS `postcodes` (`straat` varchar(255),`huisnummer` varchar(255),`huisletter` varchar(255),`huistoevoeging` varchar(255),`woonplaats` varchar(255),`postcode` varchar(255),`rd_x` int,`rd_y` int,INDEX(`postcode`));";
 $pdo->exec($sql);
 $sql = "TRUNCATE TABLE `postcodes`;";
 $pdo->exec($sql);
-$sql = "INSERT INTO `postcodes` (`straat`,`huisnummer`,`huisletter`,`huistoevoeging`,`woonplaats`,`postcode`,`x`,`y`) VALUES(?,?,?,?,?,?,?,?);";
+$sql = "INSERT INTO `postcodes` (`straat`,`huisnummer`,`huisletter`,`huistoevoeging`,`woonplaats`,`postcode`,`rd_x`,`rd_y`) VALUES(?,?,?,?,?,?,?,?);";
 $statement = $pdo->prepare($sql);
 $r = fopen("php://stdin", "r");
 $headers = fgetcsv($r);
