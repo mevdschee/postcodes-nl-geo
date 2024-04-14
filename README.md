@@ -42,7 +42,7 @@ This uses the Github CLI on Debian Linux.
 
 Here are the first 3 records of the 24.04 release in CSV format:
 
-    straat,huisnummer,huisletter,huistoevoeging,woonplaats,postcode,x,y
+    straat,huisnummer,huisletter,huistoevoeging,woonplaats,postcode,rd_x,rd_y
     "De Ruijterkade",99,,,Amsterdam,1011AB,122197,487976
     "De Ruijterkade",105,,1,Amsterdam,1011AB,122177,487877
     "De Ruijterkade",105,,2,Amsterdam,1011AB,122177,487877
@@ -56,12 +56,12 @@ Here is the SQL for those 3 records (including the table structure):
     `huistoevoeging` varchar(255) DEFAULT NULL,
     `woonplaats` varchar(255) DEFAULT NULL,
     `postcode` varchar(255) DEFAULT NULL,
-    `x` int(11) DEFAULT NULL,
-    `y` int(11) DEFAULT NULL,
+    `rd_x` int(11) DEFAULT NULL,
+    `rd_y` int(11) DEFAULT NULL,
     KEY `postcode` (`postcode`)
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
     
-    INSERT INTO `postcodes` (`straat`, `huisnummer`, `huisletter`, `huistoevoeging`, `woonplaats`, `postcode`, `x`, `y`) VALUES
+    INSERT INTO `postcodes` (`straat`, `huisnummer`, `huisletter`, `huistoevoeging`, `woonplaats`, `postcode`, `rd_x`, `rd_y`) VALUES
     ('De Ruijterkade',	'99',	NULL,	NULL,	'Amsterdam',	'1011AB',	122197,	487976),
     ('De Ruijterkade',	'105',	NULL,	'1',	'Amsterdam',	'1011AB',	122177,	487877),
     ('De Ruijterkade',	'105',	NULL,	'2',	'Amsterdam',	'1011AB',	122177,	487877);
