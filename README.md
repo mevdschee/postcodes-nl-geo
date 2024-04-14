@@ -1,4 +1,4 @@
-# Postcodes NL
+# Postcodes NL (Geo)
 
 Dutch postcodes in CSV format (7zip) and MySQL import script to allow for address validation in the Netherlands. This geo version contains RD coordinates (rounded to whole meters).
 
