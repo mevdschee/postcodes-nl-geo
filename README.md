@@ -1,6 +1,6 @@
 # Postcodes NL (Geo)
 
-Dutch postcodes in CSV format (7zip) and MySQL import script to allow for address validation in the Netherlands. This geo version contains RD coordinates (rounded to whole meters).
+Dutch postcodes in CSV format (7zip) and MySQL import script to allow for address validation in the Netherlands. This geo version contains [RD coordinates](https://nl.wikipedia.org/wiki/Rijksdriehoeksco%C3%B6rdinaten) (rounded to whole meters).
 
 Check out the [latest release](https://github.com/mevdschee/postcodes-nl-geo/releases).
 
