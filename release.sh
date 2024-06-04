@@ -1,8 +1,8 @@
 #!/bin/bash
 set -e
 if [ ! -f postcodes-nl-geo.7z ]; then
-  if [ -f ../bagconv/dist/postcodes-nl-geo.7z ]; then
-    cp ../bagconv/dist/postcodes-nl-geo.7z .
+  if [ -f ../bagconv-docker/dist/postcodes-nl-geo.7z ]; then
+    cp ../bagconv-docker/dist/postcodes-nl-geo.7z .
   else
     if [ ! -f pcodes-geo.zip ]; then
       wget berthub.eu/bagconv/pcodes-geo.zip 
